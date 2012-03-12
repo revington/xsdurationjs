@@ -7,11 +7,14 @@
     "type": "git",
     "url": "git@github.com:revington/xsdurationjs.git"
   },
-  "main": "index.js",
+  "main": "./lib/index.js",
   "engines": {
     "node": "~0.6.7"
   },
   "dependencies": {},
   "devDependencies": {},
-  "homepage": "https://github.com/revington/xsdurationjs"
+  "homepage": "https://github.com/revington/xsdurationjs",
+  "scripts": {
+    "test": "vows"
+  }
 }
