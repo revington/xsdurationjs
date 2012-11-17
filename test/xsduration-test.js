@@ -1,6 +1,6 @@
 var vows = require('vows'),
     assert = require('assert'),
-    xsduration = require('../lib/');
+    xsduration = require('..');
 var suite = vows.describe('xs:duration implementation');
 suite.addBatch({
     'Add simple durations': {

@@ -4,7 +4,7 @@
     "description": "Add xs:duration to dateTime",
     "version": "0.0.1",
     "repository": "git@github.com:revington/xsdurationjs.git",
-    "main": "./lib/index.js",
+    "main": "./xsduration.js",
     "engines": {
         "node": "*"
     },
