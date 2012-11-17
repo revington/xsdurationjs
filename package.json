@@ -2,7 +2,7 @@
     "author": "Pedro Narciso García Revington <p.revington@gmail.com>",
     "name": "xsdurationjs",
     "description": "Add xs:duration to dateTime",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "repository": "git@github.com:revington/xsdurationjs.git",
     "main": "./xsduration.js",
     "engines": {
