@@ -12,7 +12,7 @@ node.js:
 	$ npm install xsdurationjs
 
 Browser:
-Download xsdurationjs to your js directory and put a script tag
+Download xsduration.js to your js directory and put a script tag
 
 	<script type="text/javascript" src="/js/xsduration.js"></script>
 
