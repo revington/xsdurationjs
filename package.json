@@ -1,20 +1,24 @@
 {
-  "author": "Pedro Narciso García Revington <p.revington@gmail.com>",
-  "name": "xsdurationjs",
-  "description": "Add xs:duration to dateTime",
-  "version": "0.0.0",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:revington/xsdurationjs.git"
-  },
-  "main": "./lib/index.js",
-  "engines": {
-    "node": "~0.6.7"
-  },
-  "dependencies": {},
-  "devDependencies": {},
-  "homepage": "https://github.com/revington/xsdurationjs",
-  "scripts": {
-    "test": "vows"
-  }
+    "author": "Pedro Narciso García Revington <p.revington@gmail.com>",
+    "name": "xsdurationjs",
+    "description": "Add xs:duration to dateTime",
+    "version": "0.0.1",
+    "repository": "git@github.com:revington/xsdurationjs.git",
+    "main": "./lib/index.js",
+    "engines": {
+        "node": "*"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "vows": "~0.7.0"
+    },
+    "homepage": "https://github.com/revington/xsdurationjs",
+    "scripts": {
+        "test": "vows"
+    },
+    "directories": {
+        "test": "test"
+    },
+    "keywords": ["duration", "datetime", "iso 8601"],
+    "license": "MIT"
 }

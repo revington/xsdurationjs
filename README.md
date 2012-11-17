@@ -11,3 +11,8 @@ synopsis
 	var r =	xsduration.add('P5M', new Date(2012,0,1);
 	console.log(r); // puts Thu, 31 May 2012 22:00:00 GMT
 
+
+License
+-------
+MIT. See LICENSE file.
+
