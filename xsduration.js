@@ -10,25 +10,25 @@
         daysMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
         daysMonthLeap = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
     var fQuotient = xsdurationjs.fQuotient = function () {
-            var a = arguments;
-            if (a.length === 2) {
-                // fQuotient(a, b) = the greatest integer less than or equal to a/b 
-                return Math.floor(a[0] / a[1]);
-            } else if (a.length === 3) {
-                // fQuotient(a, low, high) = fQuotient(a - low, high - low) 
-                return fQuotient(a[0] - a[1], a[2] - a[1]);
-            }
-        };
+        var a = arguments;
+        if (a.length === 2) {
+            // fQuotient(a, b) = the greatest integer less than or equal to a/b 
+            return Math.floor(a[0] / a[1]);
+        } else if (a.length === 3) {
+            // fQuotient(a, low, high) = fQuotient(a - low, high - low) 
+            return fQuotient(a[0] - a[1], a[2] - a[1]);
+        }
+    };
     var modulo = xsdurationjs.modulo = function modulo() {
-            var a = arguments;
-            if (a.length === 2) {
-                // modulo(a, b) = a - fQuotient(a,b)*b 
-                return a[0] - fQuotient(a[0], a[1]) * a[1];
-            } else if (a.length === 3) {
-                // modulo(a, low, high) = modulo(a - low, high - low) + low 
-                return modulo(a[0] - a[1], a[2] - a[1]) + a[1];
-            }
-        };
+        var a = arguments;
+        if (a.length === 2) {
+            // modulo(a, b) = a - fQuotient(a,b)*b 
+            return a[0] - fQuotient(a[0], a[1]) * a[1];
+        } else if (a.length === 3) {
+            // modulo(a, low, high) = modulo(a - low, high - low) + low 
+            return modulo(a[0] - a[1], a[2] - a[1]) + a[1];
+        }
+    };
 
     function isLeapYear(year) {
         return ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0);
@@ -101,8 +101,8 @@
         var match = str.match(xsdurationRegEx);
         var substract = match[1] === '-';
         var fn = function (x) {
-                return !x ? x : (substract ? x * -1 : x);
-            };
+            return !x ? x : (substract ? x * -1 : x);
+        };
         this.Y = fn(match[years]) | 0;
         this.M = fn(match[months]) | 0;
         this.D = fn(match[days]) | 0;
@@ -110,16 +110,16 @@
         this.m = fn(match[minutes]) | 0;
         this.S = fn(match[seconds]) | 0;
     }
-    var add = xsdurationjs.add = function (xs, date) {
-            var d = new ISO8601Duration(xs),
-                s = {
-                    Y: date.getFullYear(),
-                    M: date.getMonth() + 1,
-                    D: date.getDate(),
-                    H: date.getHours(),
-                    m: date.getMinutes(),
-                    S: date.getSeconds() + (date.getMilliseconds() / 1000)
-                };
-            return w3calgo(s, d);
-        }
+    xsdurationjs.add = function (xs, date) {
+        var d = new ISO8601Duration(xs),
+            s = {
+                Y: date.getFullYear(),
+                M: date.getMonth() + 1,
+                D: date.getDate(),
+                H: date.getHours(),
+                m: date.getMinutes(),
+                S: date.getSeconds() + (date.getMilliseconds() / 1000)
+            };
+        return w3calgo(s, d);
+    };
 })(typeof exports === "undefined" ? xsdurationjs = {} : exports);
