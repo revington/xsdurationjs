@@ -33,3 +33,7 @@ License
 -------
 MIT. See LICENSE file.
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/revington/xsdurationjs/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
