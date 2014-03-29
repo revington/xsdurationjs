@@ -7,7 +7,7 @@ test: test-unit
 test-unit:
 	@NODE_ENV=test $(BIN)/vows 
 
-build:
+min:
 	@rm -rf $(OUTPUT_MIN)
 	@$(BIN)/uglifyjs  xsduration.js -cm > "$(OUTPUT_MIN)"
 
