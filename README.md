@@ -13,11 +13,17 @@ A w3c [adding duration to datetime](http://www.w3.org/TR/xmlschema-2/#adding-dur
 
 ## Browser:
 
+### Traditional way
+
 Download [xsduration-0.0.2.min.js](https://raw.githubusercontent.com/revington/xsdurationjs/master/xsduration-0.0.2.min.js) to your scripts directory and include it with a script tag.
 
 	<script type="text/javascript" src="/js/xsduration-0.0.2.min.js"></script>
 
 It does not have any dependency.
+
+### Bower
+
+	`bower install xsduration`
 
 synopsis
 --------

@@ -1,0 +1,26 @@
+{
+  "name": "xsdurationjs",
+  "version": "0.0.2",
+  "homepage": "https://github.com/revington/xsdurationjs",
+  "authors": [
+    "Pedro Narciso García Revington <p.revington@gmail.com>"
+  ],
+  "description": "A w3c xs-duration implementation for node and the browser with no dependencies.",
+  "main": "xsduration.js",
+  "keywords": [
+    "duration",
+    "date",
+    "time",
+    "datetime",
+    "iso 8601",
+    "xs duration"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
