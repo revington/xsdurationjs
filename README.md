@@ -23,7 +23,7 @@ It does not have any dependency.
 
 ### Bower
 
-	`bower install xsduration`
+	$ bower install xsduration
 
 synopsis
 --------
