@@ -9,6 +9,6 @@ test-unit:
 
 min:
 	@rm -rf $(OUTPUT_MIN)
-	@$(BIN)/uglifyjs  xsduration.js -cm > "$(OUTPUT_MIN)"
+	@uglifyjs  xsduration.js -cm > "$(OUTPUT_MIN)"
 
 .PHONY: test
