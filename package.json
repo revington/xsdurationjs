@@ -10,13 +10,11 @@
     },
     "dependencies": {},
     "devDependencies": {
-        "vows": "~0.7.0",
-        "uglify-js": "~2.4.13"
+        "vows": "~0.7.0"
     },
     "homepage": "https://github.com/revington/xsdurationjs",
     "scripts": {
-        "test": "make test --no-print-directory --quiet",
-        "postinstall": "make min --no-print-directory --quiet"
+        "test": "make test --no-print-directory --quiet"
     },
     "directories": {
         "test": "test"
