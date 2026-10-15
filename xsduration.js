@@ -35,6 +35,8 @@
     }
 
     function maximumDayInMonthFor(year, month) {
+        year += fQuotient(month, 1, 13);
+        month = modulo(month, 1, 13);
         return (isLeapYear(year) ? daysMonthLeap : daysMonth)[month - 1];
     }
     /**
@@ -75,7 +77,7 @@
         // start loop
         while (true) {
             if (e.D < 1) {
-                e.D = e.D + maximumDayInMonthFor(e.D, e.M - 1);
+                e.D = e.D + maximumDayInMonthFor(e.Y, e.M - 1);
                 carry = -1;
             } else if (e.D > maximumDayInMonthFor(e.Y, e.M)) {
                 e.D = e.D - maximumDayInMonthFor(e.Y, e.M);
