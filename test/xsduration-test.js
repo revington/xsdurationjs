@@ -55,6 +55,42 @@ suite.addBatch({
     }
 });
 suite.addBatch({
+    'Subtract durations across month boundaries': {
+        'One day before January 1 is December 31': function () {
+            var r = xsduration.add('-P1D', new Date(2024, 0, 1));
+            assert.strictEqual(r.getTime(), new Date(2023, 11, 31).getTime());
+        },
+        'February has 28 days in a common year': function () {
+            var r = xsduration.add('-P1D', new Date(2023, 2, 1));
+            assert.strictEqual(r.getTime(), new Date(2023, 1, 28).getTime());
+        },
+        'February has 29 days in a leap year': function () {
+            var r = xsduration.add('-P2D', new Date(2024, 2, 1));
+            assert.strictEqual(r.getTime(), new Date(2024, 1, 28).getTime());
+        },
+        'Century years not divisible by 400 are common years': function () {
+            var r = xsduration.add('-P1D', new Date(1900, 2, 1));
+            assert.strictEqual(r.getTime(), new Date(1900, 1, 28).getTime());
+        },
+        'Century years divisible by 400 are leap years': function () {
+            var r = xsduration.add('-P2D', new Date(2000, 2, 1));
+            assert.strictEqual(r.getTime(), new Date(2000, 1, 28).getTime());
+        },
+        'Subtract days across multiple months and a year boundary': function () {
+            var r = xsduration.add('-P60D', new Date(2024, 0, 15));
+            assert.strictEqual(r.getTime(), new Date(2023, 10, 16).getTime());
+        },
+        'Subtract months before borrowing days from the previous year': function () {
+            var r = xsduration.add('-P2M20D', new Date(2024, 2, 15));
+            assert.strictEqual(r.getTime(), new Date(2023, 11, 26).getTime());
+        },
+        'Subtract seconds across a year boundary': function () {
+            var r = xsduration.add('-PT1S', new Date(2024, 0, 1));
+            assert.strictEqual(r.getTime(), new Date(2023, 11, 31, 23, 59, 59).getTime());
+        }
+    }
+});
+suite.addBatch({
     'W3C functions': {
         'fQuotient(a,b) = the greatest integer less than or equal to a/b ': function () {
             assert.strictEqual(xsduration.fQuotient(-1, 3), -1);
